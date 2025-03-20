@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Samuel's portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Picture.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #111;
+        }
+
+        /* Muted Greens background for About section */
+        .about {
+            background-color: #b7d9a3;
+            color: #333333;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2 {
+            color: #2c6e49; /* Slightly darker green for the header */
+        }
+        
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Soft Blue background for Portfolio section */
+        .projects {
+            background-color: #d0e7f9;
+            color: #333333;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects h2 {
+            color: #1e72a7; /* Slightly darker blue for the header */
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: #1e72a7; /* Darker blue for project title */
+        }
+
+        .project-card a {
+            color: #1e72a7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body style="background-color: #2c6e49;">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+       <img src="https://images-platform.99static.com/ND8rjRNcfzmF2fvM9AdxCN73Hrc=/159x143:1759x1743/500x500/top/smart/99designs-contests-attachments/144/144588/attachment_144588666" alt="Fresh talent logo">
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="left" id="home">
+            <h1>Hi, I'm Samuel AKINGENEYE</h1>
+            <p>Welcome to my portfolio:</p>
+            <hr>
+            <section class="hero">
+                <p><strong>Hi, I'm Samuel AKINGENEYE</strong> a passionate <strong>full-stack web developer</strong> and <strong>environmental health scientist</strong>. I specialize in creating <strong>innovative solutions</strong> that blend <strong>technology with real-world challenges</strong>, particularly in <strong>cybersecurity</strong> and <strong>public health</strong>.</p>
+              
+                <p><strong>Tagline:</strong><br>
+                <em>Building impactful software to solve real-world problems and enhance public health with cutting-edge technology.</em></p>
+              
+                <div class="cta-buttons">
+                  <a href="#portfolio" class="btn">Explore My Work</a>
+                  <a href="contact.html" class="btn">Contact Me</a>
+                </div>
+              </section>
+              
+        </div>
+    
+        <div class="right">
+            <section class="about" id="about">
+                <h2>About Me</h2><br>
+                <p>Hi, I'm Samuel Akingeneye. I am a passionate student in Environmental Health Sciences with a diverse skill set in full-stack web development, cybersecurity,
+                     and data analysis. My journey in tech has driven me to combine my understanding of
+                      environmental health with my skills in technology to create innovative solutions. Whether developing secure
+                       web applications or analyzing data to make informed decisions, I am dedicated to making a positive impact in both the tech and health sectors.</p>
+            </section>
+    
+            <section class="projects" id="portfolio">
+                <h2><b>Skills</b></h2>
+                <div class="project-card">
+                    <h3>Programming skills</h3>
+                    <p>I specialize in full-stack web development, cybersecurity, and data analysis, creating secure, efficient, and dynamic web applications.</p>
+                    <a href="programming.html">View skills</a>
+                </div>
+                <div class="project-card">
+                    <h3>Environmental health skills</h3>
+                    <p>I assess environmental risks, analyze data, and promote sustainable practices to improve public health and community well-being.</p>
+                    <a href="environmental.html">View skills</a>
+                </div>
+                <div class="project-card">
+                    <h3>Other skills</h3>
+                    <p>I specialize in web design, cybersecurity, and data analysis, also properly using adobe photoshops, linux os and premier pro for video editing</p>
+                    <a href="other.html">View skills</a>
+                </div>
+            </section>
+    
+            <section class="contact" id="contact">
+                <h2>Contact Me</h2>
+                <form action="#" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+            
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Samuel-Akingeneye" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/fresh-talent-58193a283/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/TalentFres47507?t=h-FAGvEEcsIg5TFft-79dA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/samuel_akingeneye?igsh=MTFlcGlia3BhZTV2eg==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61564956148037" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com/@freshtalent-eh7ly?si=iYh_Xvsb98wSe36j" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@fresh.talent4?_t=ZM-8uZ94ijmb5T&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2025 Samuel Akingeneye. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

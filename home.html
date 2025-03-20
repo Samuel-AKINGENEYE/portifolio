@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fresh Talent in IT</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4, #dfe9f3);
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #2c3e50, #34495e);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeIn 2s ease forwards;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: slideDown 1.5s ease;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 40px 20px;
+            margin: 40px auto;
+            max-width: 1000px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li strong {
+            color: #2c6e49;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Fresh Talent's Home</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>About Me</h2>
+    <p>Welcome to my portfolio! I am a self-taught <strong>full-stack web developer</strong> and an <strong>environmental health sciences</strong> student. I combine my passion for technology and public health to solve real-world challenges.</p>
+</section>
+
+<section id="skills">
+    <h2>Programming Skills</h2>
+    <ul>
+        <li><strong>HTML, CSS, and JavaScript</strong>: Building responsive and dynamic websites.</li>
+        <li><strong>Front-End Development</strong>: Creating interactive user interfaces and working with frameworks like React and Vue.js.</li>
+        <li><strong>Back-End Development</strong>: Developing APIs, working with Node.js, Express, and databases like MongoDB and MySQL.</li>
+        <li><strong>Web Security</strong>: Implementing security best practices to safeguard websites and applications.</li>
+        <li><strong>Version Control</strong>: Using Git for version control and GitHub for collaboration.</li>
+    </ul>
+
+    <h3>Environmental Health Skills</h3>
+    <ul>
+        <li><strong>Environmental Health Risk Assessment</strong>: Evaluating and managing environmental risks.</li>
+        <li><strong>Public Health Research</strong>: Conducting research and data analysis.</li>
+        <li><strong>Toxicology and Monitoring</strong>: Understanding pollutant impacts and monitoring regularly.</li>
+        <li><strong>Waste Management</strong>: Sustainable waste management practices.</li>
+        <li><strong>Water and Food Safety</strong>: Ensuring safe drinking water and food regulation.</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to <a href="mailto:your-email@example.com">email me</a> or connect through my <a href="https://github.com/your-github">GitHub</a> and <a href="https://linkedin.com/in/your-linkedin">LinkedIn</a>.</p>
+</section>
+
+<footer>
+    <p>© 2025 Fresh Talent in IT. All Rights Reserved.</p>
+</footer>
+
+<script>
+// Reveal sections on scroll
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight / 1.2;
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < triggerBottom) {
+      section.classList.add('visible');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

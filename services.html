@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Samuel AKINGENEYE</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #34495e;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1200px;
+            overflow-y: auto;
+            height: auto;
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .service {
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .service h3 {
+            color: #34495e;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .service h3:hover {
+            color: #1abc9c;
+        }
+
+        .service p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        footer:hover {
+            background-color: #34495e;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .service h3 {
+                font-size: 1.2em;
+            }
+
+            .service p {
+                font-size: 1em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            section {
+                padding: 15px;
+                margin: 5px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .service h3 {
+                font-size: 1.1em;
+            }
+
+            .service p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Services we offer:</h1>
+</header>
+
+<section>
+    <h2>Web Development</h2>
+    <div class="service">
+        <h3>Dynamic Website Development</h3>
+        <p>I specialize in creating responsive and interactive websites using HTML, CSS, JavaScript, and back-end technologies. Whether you need a personal website, a business site, or an e-commerce platform, I offer tailored solutions to meet your needs.</p>
+    </div>
+
+    <div class="service">
+        <h3>Mobile App Development</h3>
+        <p>I'm in the process of developing mobile applications with cross-platform capabilities. I can help bring your app idea to life by ensuring it's user-friendly, functional, and secure across various devices.</p>
+    </div>
+
+    <h2>Environmental Health Services</h2>
+    <div class="service">
+        <h3>Environmental Health Risk Assessment</h3>
+        <p>I provide expert environmental health risk assessments to evaluate the impact of environmental factors on human health. This includes water quality, air pollution, hazardous waste, and other environmental hazards that affect public health.</p>
+    </div>
+
+    <div class="service">
+        <h3>Public Health Research</h3>
+        <p>With my background in environmental health sciences, I offer public health research services, including epidemiological studies, data collection, analysis, and reporting. My aim is to help identify trends and solutions to health challenges in communities.</p>
+    </div>
+
+    <h2>Cybersecurity & Tech Consultation</h2>
+    <div class="service">
+        <h3>Web Application Security</h3>
+        <p>I offer cybersecurity services to secure your web applications, identify vulnerabilities, and implement best practices to prevent cyber threats. I ensure your digital assets are safe and compliant with industry standards.</p>
+    </div>
+
+    <div class="service">
+        <h3>Freelance Web & Tech Consultation</h3>
+        <p>I'm available for freelance projects where I can provide technical expertise in both web development and environmental health. Whether it's a new project, consultation, or long-term collaboration, I am open to opportunities to help solve real-world problems.</p>
+    </div>
+
+    <h2>One Health Projects</h2>
+    <div class="service">
+        <h3>Interdisciplinary Projects</h3>
+        <p>Combining both health and environmental sectors, I offer services for One Health projects that integrate human, animal, and environmental health. This approach aims to create sustainable solutions that improve the overall health of communities.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Samuel AKINGENEYE. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
