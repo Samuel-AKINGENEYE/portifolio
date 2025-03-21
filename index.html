@@ -250,6 +250,13 @@
             }
         }
 
+        .head {
+            background-color: #15240d;
+            height: auto;
+            width: auto;
+            margin: 0%;
+        }
+
         /* Animation for Fade-in */
         @keyframes fadeIn {
             0% {
@@ -268,19 +275,27 @@
             <img src="https://images-platform.99static.com/ND8rjRNcfzmF2fvM9AdxCN73Hrc=/159x143:1759x1743/500x500/top/smart/99designs-contests-attachments/144/144588/attachment_144588666" alt="Fresh talent logo">
         </div>
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="Services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+            <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
-
+ <!-- Search Bar (Placed below the Hero Section) -->
+ <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchProjects()">
+    <button type="button" class="search-btn" onclick="searchProjects()">Search</button>
+     <!-- Search Icon -->
+  </div>
     
 
         <div class="right">
+            <div class="welcome">
+                <h1 class="head">Welcome to my portifolio</h1>
+            </div>
             <section class="about" id="about">
                 <h2>About Me</h2>
                 <p>Hi, I'm Samuel Akingeneye. I am a passionate student in Environmental Health Sciences with a diverse skill set in full-stack web development, cybersecurity, and data analysis. My journey in tech has driven me to combine my understanding of environmental health with my skills in technology to create innovative solutions. Whether developing secure web applications or analyzing data to make informed decisions, I am dedicated to making a positive impact in both the tech and health sectors.</p>

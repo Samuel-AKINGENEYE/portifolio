@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Fresh Talent in IT</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +11,6 @@
             padding: 0;
             background: linear-gradient(135deg, #f4f4f4, #dfe9f3);
             color: #333;
-            overflow-x: hidden;
         }
         header {
             background: linear-gradient(90deg, #2c3e50, #34495e);
@@ -50,11 +48,6 @@
             background-color: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-        section.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -82,6 +75,27 @@
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                padding: 10px;
+                margin: 0 5px;
+            }
+            section {
+                padding: 30px 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            section {
+                padding: 20px 10px;
+                margin: 20px 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -91,9 +105,9 @@
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a href="home.html">Home</a>
+    <a href="programming.html">Skills</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <section id="home">
@@ -123,26 +137,12 @@
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <p>Feel free to <a href="mailto:your-email@example.com">email me</a> or connect through my <a href="https://github.com/your-github">GitHub</a> and <a href="https://linkedin.com/in/your-linkedin">LinkedIn</a>.</p>
+    <p>Feel free to <a href="mailto:freshtalent491@gmail.com">email me</a> or connect through my <a href="https://github.com/Samuel-AKINGENEYE">GitHub</a> and <a href="https://www.linkedin.com/in/samuel-akingeneye-578b48331">LinkedIn</a>.</p>
 </section>
 
 <footer>
-    <p>© 2025 Fresh Talent in IT. All Rights Reserved.</p>
+    <p>© 2025 Fresh Talent . All Rights Reserved.</p>
 </footer>
-
-<script>
-// Reveal sections on scroll
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-  const triggerBottom = window.innerHeight / 1.2;
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < triggerBottom) {
-      section.classList.add('visible');
-    }
-  });
-});
-</script>
 
 </body>
 </html>
