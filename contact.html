@@ -4,101 +4,148 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
-    <link href="styles.css" rel="stylesheet"/>
     <style>
-        body {
-  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
-  font-family: sans-serif;
-  padding: 20px;
-}
-h1 {
-  font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        margin: 0;
+        background-color: #f4f4f9;
+        animation: fadeIn 2s ease-in-out;
+      }
 
-h2 {
-  font-size: 30px;
-}
+      h1 {
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        animation: slideIn 1s ease-out;
+      }
 
-.established {
-  font-style: italic;
-}
+      h2 {
+        font-size: 30px;
+        animation: slideIn 1s ease-out;
+      }
 
-h1, h2, p {
-  text-align: center;
-}
+      .established {
+        font-style: italic;
+        animation: fadeIn 3s ease-in-out;
+      }
 
-.contact {
-  width: 80%;
-  background-color: burlywood;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  max-width: 500px;
-}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-hr {
-  height: 2px;
-  background-color: brown;
-  border-color: brown;
-}
+      h1, h2, p {
+        text-align: center;
+      }
 
-.bottom-line {
-  margin-top: 25px;
-}
+      .contact {
+        width: 80%;
+        background-color: burlywood;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        animation: slideUp 1s ease-out;
+      }
 
-h1, h2 {
-  font-family: Impact, serif;
-}
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadeIn 2s ease-in-out;
+      }
 
-.item p {
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
+      hr {
+        height: 2px;
+        background-color: brown;
+        border-color: brown;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
-.flavor, .dessert {
-  text-align: left;
-  width: 75%;
-}
+      .bottom-line {
+        margin-top: 25px;
+      }
 
-.price {
-  text-align: right;
-  width: 25%;
-  color: blue;
-}
+      h1, h2 {
+        font-family: Impact, serif;
+      }
 
-/* FOOTER */
+      .item p {
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
 
-footer {
-  font-size: 14px;
-}
+      .flavor, .dessert {
+        text-align: left;
+        width: 75%;
+      }
 
-.address {
-  margin-bottom: 5px;
-}
+      .price {
+        text-align: right;
+        width: 25%;
+        color: blue;
+      }
 
-a {
-  color: black;
-}
+      footer {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 30px;
+        animation: fadeIn 2s ease-in-out;
+      }
 
-a:visited {
-  color: black;
-}
+      .address {
+        margin-bottom: 5px;
+      }
 
-a:hover {
-  color: brown;
-}
+      a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-a:active {
-  color: brown;
-}
+      a:visited {
+        color: black;
+      }
+
+      a:hover {
+        color: brown;
+        transition: color 0.3s ease;
+      }
+
+      a:active {
+        color: brown;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideUp {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
@@ -106,7 +153,7 @@ a:active {
       <main>
         <h1>My Contacts:</h1>
         <p class="established">IT Fresh Talent</p>
-        <hr>
+        <hr />
         <section>
           <h2>Contact me on:</h2>
           <article class="item">
@@ -134,12 +181,11 @@ a:active {
             <p class="flavor">HelloTalk</p><p class="price">Samuel AKINGENEYE</p>
           </article>
         </section>
-       
       </main>
-      <hr class="bottom-line">
+      <hr class="bottom-line" />
       <footer>
         <p>
-          <a href="Index.html" target="_blank">Visit our website</a>
+          <a href="index.html" target="_blank">Visit our website</a>
         </p>
         <p class="address">Fresh talent drive</p>
       </footer>

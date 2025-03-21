@@ -3,96 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>IT Samuel's portifolio</title>
+    <title>IT Samuel's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/Picture.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c6e49;
+            color: #fff;
         }
-        
-        li {
-          float: left;
-        }
-        
-        li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-        
-        li a:hover {
-          background-color: #111;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Muted Greens background for About section */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #1e4a33;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons a {
+            background-color: #2c6e49;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #1e4a33;
+        }
+
+        /* About Section */
         .about {
-            background-color: #b7d9a3;
+            background-color: #577e40;
             color: #333333;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            animation: fadeIn 1s ease-in;
+            width: auto;
+            height:auto;
         }
 
         .about h2 {
-            color: #2c6e49; /* Slightly darker green for the header */
+            color: #2c6e49;
+            font-size: 2em;
         }
-        
+
         .about p {
             font-size: 1.1em;
             line-height: 1.6;
         }
 
-        /* Soft Blue background for Portfolio section */
+        /* Projects Section */
         .projects {
             background-color: #d0e7f9;
             color: #333333;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
         }
 
         .projects h2 {
-            color: #1e72a7; /* Slightly darker blue for the header */
+            color: #1e72a7;
+            font-size: 2em;
         }
 
         .project-card {
-            background-color: #ffffff;
+            background-color:  #15240d;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
         }
 
         .project-card h3 {
-            color: #1e72a7; /* Darker blue for project title */
+            color: #1e72a7;
+            font-size: 1.6em;
         }
 
         .project-card a {
             color: #1e72a7;
-            text-decoration: none;
             font-weight: bold;
+            transition: text-decoration 0.3s ease;
         }
 
         .project-card a:hover {
             text-decoration: underline;
         }
+
+        /* Contact Form */
+        .contact form {
+            margin-top: 20px;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .contact button {
+            background-color: #2c6e49;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #1e4a33;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Flex Layout for Sections */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* Adjust container layout */
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .left, .right {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .cta-buttons a {
+                padding: 10px 20px;
+            }
+
+            .about h2, .projects h2 {
+                font-size: 1.8em;
+            }
+
+            .project-card h3 {
+                font-size: 1.4em;
+            }
+
+            /* Ensure footer text size is readable */
+            footer {
+                font-size: 1em;
+            }
+
+            /* Improve spacing around sections */
+            .about, .projects, .contact {
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+        }
+
+        /* Animation for Fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
-<body style="background-color: #2c6e49;">
+<body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav>
         <div class="logo">
-       <img src="https://images-platform.99static.com/ND8rjRNcfzmF2fvM9AdxCN73Hrc=/159x143:1759x1743/500x500/top/smart/99designs-contests-attachments/144/144588/attachment_144588666" alt="Fresh talent logo">
+            <img src="https://images-platform.99static.com/ND8rjRNcfzmF2fvM9AdxCN73Hrc=/159x143:1759x1743/500x500/top/smart/99designs-contests-attachments/144/144588/attachment_144588666" alt="Fresh talent logo">
         </div>
         <ul>
             <li><a href="home.html">Home</a></li>
@@ -101,39 +274,18 @@
             <li><a href="Services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="left" id="home">
-            <h1>Hi, I'm Samuel AKINGENEYE</h1>
-            <p>Welcome to my portfolio:</p>
-            <hr>
-            <section class="hero">
-                <p><strong>Hi, I'm Samuel AKINGENEYE</strong> a passionate <strong>full-stack web developer</strong> and <strong>environmental health scientist</strong>. I specialize in creating <strong>innovative solutions</strong> that blend <strong>technology with real-world challenges</strong>, particularly in <strong>cybersecurity</strong> and <strong>public health</strong>.</p>
-              
-                <p><strong>Tagline:</strong><br>
-                <em>Building impactful software to solve real-world problems and enhance public health with cutting-edge technology.</em></p>
-              
-                <div class="cta-buttons">
-                  <a href="#portfolio" class="btn">Explore My Work</a>
-                  <a href="contact.html" class="btn">Contact Me</a>
-                </div>
-              </section>
-              
-        </div>
     
+
         <div class="right">
             <section class="about" id="about">
-                <h2>About Me</h2><br>
-                <p>Hi, I'm Samuel Akingeneye. I am a passionate student in Environmental Health Sciences with a diverse skill set in full-stack web development, cybersecurity,
-                     and data analysis. My journey in tech has driven me to combine my understanding of
-                      environmental health with my skills in technology to create innovative solutions. Whether developing secure
-                       web applications or analyzing data to make informed decisions, I am dedicated to making a positive impact in both the tech and health sectors.</p>
+                <h2>About Me</h2>
+                <p>Hi, I'm Samuel Akingeneye. I am a passionate student in Environmental Health Sciences with a diverse skill set in full-stack web development, cybersecurity, and data analysis. My journey in tech has driven me to combine my understanding of environmental health with my skills in technology to create innovative solutions. Whether developing secure web applications or analyzing data to make informed decisions, I am dedicated to making a positive impact in both the tech and health sectors.</p>
             </section>
-    
+
             <section class="projects" id="portfolio">
                 <h2><b>Skills</b></h2>
                 <div class="project-card">
@@ -148,47 +300,42 @@
                 </div>
                 <div class="project-card">
                     <h3>Other skills</h3>
-                    <p>I specialize in web design, cybersecurity, and data analysis, also properly using adobe photoshops, linux os and premier pro for video editing</p>
+                    <p>I also specialize in web design, cybersecurity, data analysis, and proficient use of Adobe Photoshop, Linux OS, and Premier Pro for video editing.</p>
                     <a href="other.html">View skills</a>
                 </div>
             </section>
-    
+
             <section class="contact" id="contact">
                 <h2>Contact Me</h2>
-                <form action="#" method="POST">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-            
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-            
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-            
-                    <button type="submit">Send Message</button>
-                </form>
+                <p>If you have a project or idea, let's collaborate! Fill out this form: <a href="form.html" target="_blank"><button>Google Form</button></a> </p>
             </section>
+
+            <footer>
+                <div class="social-links">
+                    <a href="https://github.com/Samuel-Akingeneye" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/fresh-talent-58193a283/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/TalentFres47507?t=h-FAGvEEcsIg5TFft-79dA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/samuel_akingeneye?igsh=MTFlcGlia3BhZTV2eg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61564956148037" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com/@freshtalent-eh7ly?si=iYh_Xvsb98wSe36j" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@fresh.talent4?_t=ZM-8uZ94ijmb5T&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p>&copy; 2025 Samuel AKINGENEYE. All rights reserved.</p>
+            </footer>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/Samuel-Akingeneye" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/fresh-talent-58193a283/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/TalentFres47507?t=h-FAGvEEcsIg5TFft-79dA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/samuel_akingeneye?igsh=MTFlcGlia3BhZTV2eg==" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61564956148037" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://youtube.com/@freshtalent-eh7ly?si=iYh_Xvsb98wSe36j" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@fresh.talent4?_t=ZM-8uZ94ijmb5T&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-        <p>&copy; 2025 Samuel Akingeneye. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <!-- JS for Form Validation (Optional) -->
     <script>
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
+        document.querySelector('form').addEventListener('submit', function (event) {
+            let name = document.querySelector('[name="name"]').value;
+            let email = document.querySelector('[name="email"]').value;
+            let message = document.querySelector('[name="message"]').value;
+            
+            if (!name || !email || !message) {
+                event.preventDefault();
+                alert('Please fill out all fields.');
+            }
         });
     </script>
 </body>

@@ -8,8 +8,8 @@
 /* Body and overall page styling */
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    background-color: #f0f0f0;
+    height: auto;
+    background-color: #12331d;
     color: #333;
     overflow-x: hidden;
     scroll-behavior: smooth; /* Smooth scrolling */
@@ -19,6 +19,7 @@ body {
     background-position: center center; /* Centers the image */
     background-attachment: fixed; /* Makes the background fixed when scrolling */
     margin: 0; /* Removes default margin */
+    width:auto;
 }
 
 /* logo */
@@ -113,9 +114,9 @@ body {
 
 /* Right side: Content */
 .right {
-    width: 55%;
+    width: auto;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #1a3f11;
     color: #333;
 }
 
@@ -137,7 +138,7 @@ h2 {
 }
 
 .project-card {
-    background-color: #f4f4f4;
+    background-color: #b7d9a3;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -177,9 +178,13 @@ h2 {
 /* Contact Section */
 .contact {
     margin-top: 3rem;
-    padding: 2rem;
-    background-color: violet;
+    background-color: #290029;
     border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
 }
 
 .contact h2 {
