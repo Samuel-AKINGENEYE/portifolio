@@ -18,7 +18,6 @@
             text-align: center;
             padding: 80px 20px 30px;
             color: #fff;
-            animation: fadeIn 2s ease-in-out;
         }
 
         header h1 {
@@ -33,7 +32,6 @@
             color: #fff;
             padding: 0 15px;
             margin-bottom: 50px;
-            animation: fadeIn 2s ease-in-out;
         }
 
         section {
@@ -43,12 +41,6 @@
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease-in-out;
-        }
-
-        section.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -71,25 +63,11 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: all 0.4s;
-            cursor: pointer;
             font-size: 1.1rem;
         }
 
         li::before {
             content: "🌱";
-            transition: transform 0.4s;
-        }
-
-        li:hover {
-            background-color: #74ebd5;
-            color: #fff;
-            transform: scale(1.05);
-            border-radius: 10px;
-        }
-
-        li:hover::before {
-            transform: rotate(360deg);
         }
 
         footer {
@@ -123,11 +101,6 @@
             }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
         @media(max-width: 768px) {
             header h1 {
                 font-size: 2.4rem;
@@ -145,7 +118,7 @@
 </head>
 <body>
     <header>
-        <h1>My Environmental Skills 🌍</h1>
+        <h1>My Environmental Skills </h1>
         <p>As an Environmental Health Practitioner with a BSc (Hons) in Environmental Health Sciences, I've acquired a broad range of skills to address real-world public health challenges.</p>
     </header>
 
@@ -204,29 +177,5 @@
         <span style="left: 65%; animation-duration: 19s;"></span>
         <span style="left: 80%; animation-duration: 22s;"></span>
     </div>
-
-    <script>
-        // Animate each section when it enters view
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        });
-
-        // Trigger animation if already in view on load
-        window.addEventListener('load', () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

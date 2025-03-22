@@ -9,8 +9,9 @@
         font-family: sans-serif;
         padding: 20px;
         margin: 0;
-        background-color: #f4f4f9;
+        background-color: #092415;
         animation: fadeIn 2s ease-in-out;
+        overflow-x: hidden;
       }
 
       h1 {
@@ -18,16 +19,20 @@
         margin-top: 0;
         margin-bottom: 15px;
         animation: slideIn 1s ease-out;
+        color: #333;
       }
 
       h2 {
         font-size: 30px;
         animation: slideIn 1s ease-out;
+        color: #555;
       }
 
       .established {
         font-style: italic;
         animation: fadeIn 3s ease-in-out;
+        text-align: center;
+        color: #777;
       }
 
       h1, h2, p {
@@ -36,14 +41,19 @@
 
       .contact {
         width: 80%;
-        background-color: burlywood;
+        background-color: #463914;
         margin-left: auto;
         margin-right: auto;
         padding: 20px;
-        max-width: 500px;
+        max-width: 600px;
         border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         animation: slideUp 1s ease-out;
+        transition: transform 0.3s ease;
+      }
+
+      .contact:hover {
+        transform: scale(1.05);
       }
 
       img {
@@ -66,7 +76,7 @@
       }
 
       h1, h2 {
-        font-family: Impact, serif;
+        font-family: 'Impact', serif;
       }
 
       .item p {
@@ -74,17 +84,20 @@
         margin-top: 5px;
         margin-bottom: 5px;
         font-size: 18px;
+        font-weight: bold;
+        color: #333;
       }
 
-      .flavor, .dessert {
+      .flavor {
         text-align: left;
         width: 75%;
+        color: #777;
       }
 
       .price {
         text-align: right;
         width: 25%;
-        color: blue;
+        color: #6c757d;
       }
 
       footer {
@@ -99,13 +112,13 @@
       }
 
       a {
-        color: black;
+        color: color;
         text-decoration: none;
         font-weight: bold;
       }
 
       a:visited {
-        color: black;
+        color: blue;
       }
 
       a:hover {
@@ -114,7 +127,25 @@
       }
 
       a:active {
-        color: brown;
+        color: blue;
+      }
+
+      .fab {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ff6347;
+        color: white;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 24px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .fab:hover {
+        transform: scale(1.1);
       }
 
       /* Animations */
@@ -151,44 +182,54 @@
   <body>
     <div class="contact">
       <main>
-        <h1>My Contacts:</h1>
+        <h1>Contact Me</h1>
         <p class="established">IT Fresh Talent</p>
         <hr />
         <section>
-          <h2>Contact me on:</h2>
+          <h2>Get in Touch:</h2>
           <article class="item">
             <p class="flavor">Whatsapp</p><p class="price">+250 790663921</p>
           </article>
           <article class="item">
-            <p class="flavor">Facebook</p><p class="price">Samuel akingeneye</p>
+            <p class="flavor">Facebook</p><p class="price">Samuel Akingeneye</p>
           </article>
           <article class="item">
-            <p class="flavor">Instagram</p><p class="price">Samuel akingeneye</p>
+            <p class="flavor">Instagram</p><p class="price">Samuel Akingeneye</p>
           </article>
           <article class="item">
             <p class="flavor">GitHub</p><p class="price">Samuel-AKINGENEYE</p>
           </article>
           <article class="item">
-            <p class="flavor">Tiktok</p><p class="price">Fresh talent</p>
+            <p class="flavor">Tiktok</p><p class="price">Fresh Talent</p>
           </article>
           <article class="item">
-            <p class="flavor">Linkedin</p><p class="price">Samuel AKINGENEYE</p>
+            <p class="flavor">Linkedin</p><p class="price">Samuel Akingeneye</p>
           </article>
           <article class="item">
-            <p class="flavor">Twitter</p><p class="price">Samuel AKINGENEYE</p>
+            <p class="flavor">Twitter</p><p class="price">Samuel Akingeneye</p>
           </article>
           <article class="item">
-            <p class="flavor">HelloTalk</p><p class="price">Samuel AKINGENEYE</p>
+            <p class="flavor">HelloTalk</p><p class="price">Samuel Akingeneye</p>
           </article>
         </section>
       </main>
       <hr class="bottom-line" />
       <footer>
         <p>
-          <a href="index.html" target="_blank">Visit our website</a>
+          <a href="index.html" target="_blank">Visit Our Website</a>
         </p>
-        <p class="address">Fresh talent drive</p>
+        <p class="address">Fresh Talent Drive</p>
       </footer>
     </div>
+
+    <div class="fab" onclick="scrollToTop()">
+      <span>↑</span>
+    </div>
+
+    <script>
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
   </body>
 </html>
