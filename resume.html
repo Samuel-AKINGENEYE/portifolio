@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Talent in IT - Resume</title>
+    <title>Resume</title>
     <style>
         * {
             margin: 0;
@@ -130,6 +130,56 @@
                 font-size: 1.3rem;
             }
         }
+
+        #certificates {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+#certificates h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.certificate {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.certificate h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.certificate a {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #007bff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.certificate a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
     </style>
 </head>
 <body>
@@ -163,6 +213,31 @@
             <li>Computer Fundamentals – [Certification Provider]</li>
         </ul>
     </fieldset>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificate">
+          <h3>Responsive Web Design - FreeCodeCamp</h3>
+          <a href="/home/documents/My Documents/Certificates/Freecodecamp.org/Responsive Web Design.pdf" target="_blank">
+            View/Download Certificate
+          </a>
+        </div>
+        <div class="certificate">
+          <h3>JavaScript - FreeCodeCamp</h3>
+          <a href="path/to/javascript-certificate.pdf" target="_blank">
+            View/Download Certificate
+          </a>
+        </div>
+        <div class="certificate">
+          <h3>Computer Fundamentals - Certificate</h3>
+          <a href="path/to/computer-fundamentals-certificate.pdf" target="_blank">
+            View/Download Certificate
+          </a>
+        </div>
+        <!-- Add more certificates as needed -->
+      </section>
+      
+
 
     <fieldset>
         <legend>Education</legend>
