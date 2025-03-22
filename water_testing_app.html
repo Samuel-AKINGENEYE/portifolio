@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Testing App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #0072ff;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #005fcc;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .result h2 {
+            margin-bottom: 10px;
+        }
+        .result p {
+            margin: 5px 0;
+        }
+        @media screen and (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Water Testing App</h1>
+    <input type="number" id="phValue" placeholder="Enter pH level (0-14)">
+    <input type="number" id="turbidityValue" placeholder="Turbidity (NTU)">
+    <input type="number" id="chlorineValue" placeholder="Chlorine Level (mg/L)">
+    <select id="waterSource">
+        <option value="">Select Water Source</option>
+        <option value="tap">Tap Water</option>
+        <option value="well">Well Water</option>
+        <option value="river">River Water</option>
+        <option value="bottled">Bottled Water</option>
+    </select>
+    <button onclick="testWaterQuality()">Test Water</button>
+
+    <div class="result" id="waterResult"></div>
+</div>
+
+<script>
+    function testWaterQuality() {
+        const ph = parseFloat(document.getElementById('phValue').value);
+        const turbidity = parseFloat(document.getElementById('turbidityValue').value);
+        const chlorine = parseFloat(document.getElementById('chlorineValue').value);
+        const source = document.getElementById('waterSource').value;
+
+        if (isNaN(ph) || isNaN(turbidity) || isNaN(chlorine) || !source) {
+            alert('Please fill out all fields correctly.');
+            return;
+        }
+
+        let phStatus = ph >= 6.5 && ph <= 8.5 ? "Good" : "Poor";
+        let turbidityStatus = turbidity <= 5 ? "Clear" : "Cloudy";
+        let chlorineStatus = chlorine <= 4 ? "Safe" : "Too High";
+
+        const resultHTML = `
+            <h2>Test Results</h2>
+            <p><strong>Water Source:</strong> ${source.charAt(0).toUpperCase() + source.slice(1)} Water</p>
+            <p><strong>pH Level:</strong> ${ph} (${phStatus})</p>
+            <p><strong>Turbidity:</strong> ${turbidity} NTU (${turbidityStatus})</p>
+            <p><strong>Chlorine Level:</strong> ${chlorine} mg/L (${chlorineStatus})</p>
+        `;
+
+        document.getElementById('waterResult').innerHTML = resultHTML;
+    }
+</script>
+</body>
+</html>

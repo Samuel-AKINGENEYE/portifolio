@@ -151,6 +151,8 @@
             text-decoration: underline;
         }
 
+        
+
         /* Contact Form */
         .contact form {
             margin-top: 20px;
@@ -266,6 +268,37 @@
                 opacity: 1;
             }
         }
+
+        .faq-item {
+            background-color:  #15240d;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+       
+        .faq-item h3 {
+            color: #1e72a7;
+            font-size: 1.6em;
+        }
+
+        .faq-item a {
+            color: #1e72a7;
+            font-weight: bold;
+            transition: text-decoration 0.3s ease;
+        }
+
+        .faq-item a:hover {
+            text-decoration: underline;
+            color: #577e40;
+        }
+
+        #faq h2{
+            color: yellowgreen;
+        }
+
     </style>
 </head>
 <body>
@@ -325,6 +358,31 @@
                 <p>If you have a project or idea, let's collaborate! Fill out this form: <a href="form.html" target="_blank"><button>Google Form</button></a> </p>
             </section>
 
+            <section class="faq" id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>What is full-stack web development?</h3>
+                    <p>Full-stack web development involves both the front-end (what users see) and the back-end (server, database) of a web application. A full-stack developer is proficient in both areas and can build a complete web application from start to finish.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What technologies do you use for web development?</h3>
+                    <p>I specialize in HTML, CSS, JavaScript, and React for the front-end, as well as Node.js, Express.js, and MongoDB for back-end development. Additionally, I have experience with various cybersecurity tools and techniques to ensure web applications are secure.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do you ensure the security of web applications?</h3>
+                    <p>I use best practices in cybersecurity, including implementing secure coding practices, penetration testing, using firewalls, and following OWASP security guidelines to prevent common vulnerabilities such as SQL injection and cross-site scripting (XSS).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are some of the projects you have worked on?</h3>
+                    <p>Some of my projects include a weather app, a water testing application, and several dynamic websites. You can view my work in the <a href="projects.html">Projects</a> section of my website.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I get in touch with you?</h3>
+                    <p>You can reach me through the <a href="contact.html">Contact</a> section, or email me directly at <a href="mailto:freshtalent491@gmail.com">freshtalent491@gmail.com</a>.</p>
+                </div>
+            </section>
+            
+
             <footer>
                 <div class="social-links">
                     <a href="https://github.com/Samuel-Akingeneye" target="_blank"><i class="fab fa-github"></i></a>
@@ -342,16 +400,26 @@
 
     <!-- JS for Form Validation (Optional) -->
     <script>
-        document.querySelector('form').addEventListener('submit', function (event) {
-            let name = document.querySelector('[name="name"]').value;
-            let email = document.querySelector('[name="email"]').value;
-            let message = document.querySelector('[name="message"]').value;
-            
-            if (!name || !email || !message) {
-                event.preventDefault();
-                alert('Please fill out all fields.');
+        function searchProjects() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let projectCards = document.querySelectorAll('.project-card'); // You can adjust this to target the elements you want to search through (like project cards).
+    
+            for (let i = 0; i < projectCards.length; i++) {
+                let title = projectCards[i].getElementsByTagName("h3")[0]; // Adjust this to match the title element in your cards
+    
+                if (title) {
+                    let txtValue = title.textContent || title.innerText;
+    
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        projectCards[i].style.display = "";
+                    } else {
+                        projectCards[i].style.display = "none";
+                    }
+                }
             }
-        });
+        }
     </script>
+    
 </body>
 </html>
