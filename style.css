@@ -87,6 +87,52 @@ body {
     padding-top: 6rem; /* Adjusted to avoid nav overlap */
     min-height: calc(100vh - 80px); /* Ensure the container takes up at least the full height of the viewport minus navbar */
 }
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background: url('WhatsApp Image 2025-04-02 at 14.44.32.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve text visibility */
+}
+
+.head {
+    font-size: 2rem;
+    z-index: 1; /* Ensures text is above overlay */
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-text {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: slideIn 3s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
 
 /* Left side: Image or Introduction */
 .left {
@@ -165,7 +211,7 @@ h2 {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background-color: green;
+    background-color: #2c6e49;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -549,26 +595,7 @@ color: yellowgreen;
     }
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-image: url('');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    position: relative;
-}
 
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
 body {
     padding-top: auto; /* Adjust to match the height of your navbar */
 }
