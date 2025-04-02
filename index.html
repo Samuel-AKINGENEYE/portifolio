@@ -401,7 +401,57 @@
   }
 }
 
-       
+/* Apply when element is in viewport */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.contact-form {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* For mobile responsiveness */
+        @media (max-width: 768px) {
+            .contact-form {
+                width: 80%;
+            }
+        }
+ 
 
     </style>
 </head>
@@ -428,76 +478,76 @@
      <!-- Search Icon -->
   </div>
 
-  <section class="hero">
-    <div class="overlay"></div>
-    <h1 class="head">
-        Hello, I'm Samuel AKINGENEYE <br>
-        <span class="animated-text">Full-stack Web Developer | Cybersecurity Enthusiast | Data Analyst | Environmental Health Practitioner.</span>
-    </h1>
+  <section class="hero-section">
+    <div class="content">
+        <p class="headline">Hello, I'm Samuel AKINGENEYE</p><br><br>
+
+        <div class="expertise-icons">
+            <div class="icon-wrapper">
+                <span class="icon-label">Designer</span>
+                <a href="design.html">
+                <div class="icon-container">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+            </a>
+            </div>
+
+            <div class="icon-wrapper">
+                <span class="icon-label">Programmer</span>
+                <a href="programming.html">
+                <div class="icon-container">
+                    <i class="fas fa-code"></i>
+                </div>
+            </a>
+            </div>
+
+            <div class="icon-wrapper">
+                <span class="icon-label">Cybersecurity Ethusiast</span>
+                <a href="cybersecurity.html">
+                <div class="icon-container">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </a>
+            </div>
+
+            <div class="icon-wrapper">
+                <span class="icon-label">Data Analyst</span>
+                <a href="analysis.html">
+                <div class="icon-container">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </a>
+            </div>
+
+            <div class="icon-wrapper">
+                <span class="icon-label">Environmental Health Practitioner</span>
+                <a href="environmental.html">
+                <div class="icon-container">
+                    <i class="fas fa-leaf"></i>
+                </div>
+            </a>
+            </div>
+        </div><br><br>
+
+        <a href="projects.html" class="cta-button">View My Projects</a>
+    </div>
 </section>
 
-            <section class="cta">
-                <div class="cta-content">
-                  <h2>Check Out My Projects</h2>
-                  <p>Explore my work where I’ve built full-stack web applications, tackled cybersecurity challenges, and created impactful data-driven solutions.</p>
-                  <div class="cta-buttons">
-                    <a href="projects.html" class="cta-btn">View My Work</a>
-                    
-                  </div>
-                </div>
-              </section>
-              
+<div class="contact-form">
+    <h2>Contact Me</h2>
+    <form id="contactForm" action="submit_form.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
 
-            <section class="projects" id="portfolio">
-                <h2><b>Skills:</b></h2>
-                <div class="project-card">
-                    <h3>Programming skills</h3>
-                    <p>I specialize in full-stack web development, cybersecurity, and data analysis, creating secure, efficient, and dynamic web applications.</p>
-                    <a href="programming.html">View skills</a>
-                </div>
-                <div class="project-card">
-                    <h3>Environmental health skills</h3>
-                    <p>I assess environmental risks, analyze data, and promote sustainable practices to improve public health and community well-being.</p>
-                    <a href="environmental.html">View skills</a>
-                </div>
-                <div class="project-card">
-                    <h3>Other skills</h3>
-                    <p>I also specialize in web design, cybersecurity, data analysis, and proficient use of Adobe Photoshop, Linux OS, and Premier Pro for video editing.</p>
-                    <a href="other.html">View skills</a>
-                </div>
-            </section>
-            
-            <!--Frequently asked questions section-->
-            <section class="faq" id="faq">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <h3 class="faq-question">What is full-stack web development?</h3>
-                    <p class="faq-answer">Full-stack web development involves both the front-end (what users see) and the back-end (server, database) of a web application. A full-stack developer is proficient in both areas and can build a complete web application from start to finish.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What technologies do you use for web development?</h3>
-                    <p class="faq-answer">I specialize in HTML, CSS, JavaScript, and React for the front-end, as well as Node.js, Express.js, and MongoDB for back-end development. Additionally, I have experience with various cybersecurity tools and techniques to ensure web applications are secure.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How do you ensure the security of web applications?</h3>
-                    <p class="faq-answer">I use best practices in cybersecurity, including implementing secure coding practices, penetration testing, using firewalls, and following OWASP security guidelines to prevent common vulnerabilities such as SQL injection and cross-site scripting (XSS).</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">What are some of the projects you have worked on?</h3>
-                    <p class="faq-answer">Some of my projects include a weather app, a water testing application, and several dynamic websites. You can view my work in the <a href="projects.html">Projects</a> section of my website.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How can I get in touch with you?</h3>
-                    <p class="faq-answer">You can reach me through the <a href="contact.html">Contact</a> section, or email me directly at <a href="mailto:freshtalent491@gmail.com">freshtalent491@gmail.com</a>.</p>
-                </div>
-            </section>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-            <section class="contact" id="contact">
-                <h2>Contact Me</h2>
-                <p>If you have a project or idea, let's collaborate! Fill out this form: <a href="form.html" target="_blank"><button>Google Form</button></a> </p>
-            </section>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-            
+        <button type="submit">Send Message</button>
+    </form>
+</div>
             <a href="https://wa.me/250790663921" class="whatsapp-button">
                 <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="50">
                 <span class="whatsapp-text">Chat with Samuel</span>
@@ -561,7 +611,49 @@
         });
     });
 });
+ // Add custom hover interaction for mobile devices
+ document.querySelectorAll('.icon-wrapper').forEach(icon => {
+      icon.addEventListener('touchstart', function() {
+        this.classList.add('hover');
+      });
+      icon.addEventListener('touchend', function() {
+        setTimeout(() => {
+          this.classList.remove('hover');
+        }, 1000);
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    // Fade-in effect for sections when scrolling
+    const fadeInElements = document.querySelectorAll('.fade-in');
 
+    function handleScroll() {
+        fadeInElements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                element.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run on page load
+});
+        // Handle form submission via JavaScript (optional, if needed for more complex forms)
+        const form = document.getElementById('contactForm');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();  // Prevent the default form submission behavior
+            
+            const name = form.querySelector('#name').value;
+            const email = form.querySelector('#email').value;
+            const message = form.querySelector('#message').value;
+
+            if(name && email && message) {
+                // Here you can use AJAX, fetch, or any other method to send the form data
+                alert('Form submitted! Thank you for reaching out.');
+                form.reset();  // Reset the form after successful submission
+            }
+        });
     </script>
     
 </body>
