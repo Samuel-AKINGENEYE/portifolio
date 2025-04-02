@@ -13,7 +13,7 @@ body {
     color: #333;
     overflow-x: hidden;
     scroll-behavior: smooth; /* Smooth scrolling */
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/050/441/294/small_2x/sustainable-tech-growth-green-plant-on-electronic-circuit-board-eco-friendly-technology-concept-photo.jpg);
+    background-image: url(https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg?semt=ais_hybrid);
     padding: 20px;
     background-size: cover; /* Ensures it covers the whole screen */
     background-position: center center; /* Centers the image */
@@ -178,7 +178,7 @@ h2 {
 /* Contact Section */
 .contact {
     margin-top: 3rem;
-    background-color: #290029;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 8px;
     padding: 30px;
     width: 100%;
@@ -459,6 +459,7 @@ color: yellowgreen;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    background: rgba(0, 0, 0, 0.8);
   }
 
   .search-btn {
@@ -552,7 +553,7 @@ color: yellowgreen;
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background-image: url('your-background-image.jpg');
+    background-image: url('https://img.freepik.com/free-photo/glasses-lie-laptop-reflecting-light-from-screen-dark_169016-52267.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -572,7 +573,7 @@ body {
     padding-top: auto; /* Adjust to match the height of your navbar */
 }
 footer {
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-align: center;
     padding: 20px;
