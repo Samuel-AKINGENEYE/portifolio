@@ -3,146 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Homepage</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f4f4f4, #dfe9f3);
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #8dada2;
             color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
         }
+
+        /* Header */
         header {
-            background: linear-gradient(90deg, #2c3e50, #34495e);
+            background-color: #333;
             color: white;
-            padding: 50px 20px;
+            padding: 20px 0;
             text-align: center;
-            animation: fadeIn 2s ease forwards;
         }
+
         header h1 {
-            font-size: 3rem;
-            margin: 0;
-            animation: slideDown 1.5s ease;
+            font-size: 2.5rem;
+            font-weight: 600;
         }
-        nav {
-            background-color: #34495e;
-            padding: 10px;
-            text-align: center;
+
+        header nav {
+            margin-top: 10px;
         }
-        nav a {
-            color: white;
-            padding: 14px 20px;
+
+        header nav a {
+            color: #fff;
             text-decoration: none;
-            margin: 0 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s, transform 0.3s;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
         }
-        nav a:hover {
-            background-color: #1abc9c;
-            transform: scale(1.1);
+
+        header nav a:hover {
+            color: #ff5722;
         }
-        section {
-            padding: 40px 20px;
-            margin: 40px auto;
-            max-width: 1000px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-            opacity: 1;
-            transform: translateY(0);
-        }
-        h2, h3 {
-            color: #2c3e50;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        li strong {
-            color: #2c6e49;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.freepik.com/free-photo/technology-digital-business-concept-ai-graphic-interface_53876-129703.jpg');
+            background-size: cover;
+            background-position: center;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 15px;
+            color: white;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
-        @keyframes slideDown {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            opacity: 0.8;
         }
+
+        .hero .cta-buttons a {
+            padding: 12px 30px;
+            background-color: #276b38;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 0 15px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-buttons a {
+    padding: 12px 30px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 0 20px; /* Increased the margin here */
+    transition: background-color 0.3s ease;
+}
+
+
+        .hero .cta-buttons a:hover {
+            background-color: #ff5722;
+        }
+
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            header h1 {
+            .projects .project-card {
+                width: 80%;
+            }
+
+            .hero h2 {
                 font-size: 2rem;
-            }
-            nav a {
-                padding: 10px;
-                margin: 0 5px;
-            }
-            section {
-                padding: 30px 15px;
-            }
-        }
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-            section {
-                padding: 20px 10px;
-                margin: 20px 10px;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Welcome to Fresh Talent's Home</h1>
-</header>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<nav>
-    <a href="home.html">Home</a>
-    <a href="programming.html">Skills</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h2>Welcome to My World of Technology</h2>
+            <p>Explore my projects in web development, cybersecurity, and data analysis</p>
+            <div class="cta-buttons">
+                <a href="portfolio.html">View my projects</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </div>
+    </section>
 
-<section id="home">
-    <h2>About Me</h2>
-    <p>Welcome to my portfolio! I am a self-taught <strong>full-stack web developer</strong> and an <strong>environmental health sciences</strong> student. I combine my passion for technology and public health to solve real-world challenges.</p>
-</section>
+    <!-- Featured Projects Section -->
 
-<section id="skills">
-    <h2>Programming Skills</h2>
-    <ul>
-        <li><strong>HTML, CSS, and JavaScript</strong>: Building responsive and dynamic websites.</li>
-        <li><strong>Front-End Development</strong>: Creating interactive user interfaces and working with frameworks like React and Vue.js.</li>
-        <li><strong>Back-End Development</strong>: Developing APIs, working with Node.js, Express, and databases like MongoDB and MySQL.</li>
-        <li><strong>Web Security</strong>: Implementing security best practices to safeguard websites and applications.</li>
-        <li><strong>Version Control</strong>: Using Git for version control and GitHub for collaboration.</li>
-    </ul>
-
-    <h3>Environmental Health Skills</h3>
-    <ul>
-        <li><strong>Environmental Health Risk Assessment</strong>: Evaluating and managing environmental risks.</li>
-        <li><strong>Public Health Research</strong>: Conducting research and data analysis.</li>
-        <li><strong>Toxicology and Monitoring</strong>: Understanding pollutant impacts and monitoring regularly.</li>
-        <li><strong>Waste Management</strong>: Sustainable waste management practices.</li>
-        <li><strong>Water and Food Safety</strong>: Ensuring safe drinking water and food regulation.</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to <a href="mailto:freshtalent491@gmail.com">email me</a> or connect through my <a href="https://github.com/Samuel-AKINGENEYE">GitHub</a> and <a href="https://www.linkedin.com/in/samuel-akingeneye-578b48331">LinkedIn</a>.</p>
-</section>
-
-<footer>
-    <p>© 2025 Fresh Talent . All Rights Reserved.</p>
-</footer>
+    </section>
 
 </body>
 </html>

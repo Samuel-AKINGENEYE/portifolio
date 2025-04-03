@@ -38,7 +38,7 @@
 
   <section class="hero-section">
     <div class="content">
-        <p class="headline">Hello, I'm Samuel AKINGENEYE</p><br><br>
+        <h2 id="typewriter"></h2><br><br>
 
         <div class="expertise-icons">
             <div class="icon-wrapper">
@@ -90,22 +90,6 @@
         <a href="projects.html" class="cta-button">View My Projects</a>
     </div>
 </section>
-
-<div class="contact-form">
-    <h2>Contact Me</h2>
-    <form id="contactForm" action="submit_form.php" method="POST">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-</div>
             <a href="https://wa.me/250790663921" class="whatsapp-button">
                 <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="50">
                 <span class="whatsapp-text">Chat with Samuel</span>
@@ -116,10 +100,10 @@
             <footer>
                 <div class="social-links">
                     <a href="https://github.com/Samuel-Akingeneye" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/fresh-talent-58193a283/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://linkedin.com/in/samuel-akingeneye-578b48331" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://x.com/TalentFres47507?t=h-FAGvEEcsIg5TFft-79dA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.instagram.com/samuel_akingeneye?igsh=MTFlcGlia3BhZTV2eg==" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61564956148037" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61564956148037" alt="https://www.facebook.com/profile.php?id=61573427425148" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://youtube.com/@freshtalent-eh7ly?si=iYh_Xvsb98wSe36j" target="_blank"><i class="fab fa-youtube"></i></a>
                     <a href="https://www.tiktok.com/@fresh.talent4?_t=ZM-8uZ94ijmb5T&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
@@ -212,6 +196,20 @@
                 form.reset();  // Reset the form after successful submission
             }
         });
+        const text = "Hello there! am Samuel AKINGENEYE, and am here to introduce my self to you. so I am..👇";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 60);
+            }
+        }
+        typeWriter();
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
     
 </body>
