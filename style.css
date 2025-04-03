@@ -166,6 +166,9 @@ li a:hover {
     padding: 20px;
 }
 
+a {
+    text-decoration: none;
+}
 
 .hero-section::before {
     content: "";
