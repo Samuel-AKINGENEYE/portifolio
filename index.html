@@ -8,17 +8,25 @@
     <link rel="icon" href="images/Picture.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
 
 
     </style>
 </head>
 <body>
-    
-    <nav>
-       
+    <header>
+     
+    <nav class="nav-menu">
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
         <ul>
-            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="home.html"><i class="fas fa-home active"></i> Home</a></li>
             <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
             <li><a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
             <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
@@ -26,20 +34,13 @@
             <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
             <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
-    
+        
     </nav>
-
- <!-- Search Bar (Placed below the Hero Section) -->
- <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchProjects()">
-    <button type="button" class="search-btn" onclick="searchProjects()">Search</button>
-     <!-- Search Icon -->
-  </div>
-
+</header>
+<main>
   <section class="hero-section">
     <div class="content">
-        <h2 id="typewriter"></h2><br><br>
-
+<h2>I am Samuel AKINGENEYE, and I am..</h2><br><br><br>
         <div class="expertise-icons">
             <div class="icon-wrapper">
                 <span class="icon-label">Designer</span>
@@ -90,6 +91,7 @@
         <a href="projects.html" class="cta-button">View My Projects</a>
     </div>
 </section>
+</main>
             <a href="https://wa.me/250790663921" class="whatsapp-button">
                 <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="50">
                 <span class="whatsapp-text">Chat with Samuel</span>
@@ -210,6 +212,17 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        const checkbox = document.getElementById('check');
+  const body = document.body;
+
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      body.classList.add('no-scroll'); 
+    } else {
+      body.classList.remove('no-scroll');
+    }
+  });
     </script>
     
 </body>

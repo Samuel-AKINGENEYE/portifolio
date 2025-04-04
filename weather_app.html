@@ -5,33 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #a0c4ff, #bdb2ff);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            animation: fadeIn 2s ease-in-out;
         }
+
+        /* Container Styling */
         .container {
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
         }
+
+        /* Container hover animation */
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Input Field Styling */
         input[type="text"] {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ccc;
             border-radius: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 16px;
+            transition: all 0.3s ease;
         }
+
+        /* Input Focus Effect */
+        input[type="text"]:focus {
+            border-color: #4b6cb7;
+            outline: none;
+        }
+
+        /* Button Styling */
         button {
             width: 100%;
             padding: 12px;
@@ -41,22 +65,34 @@
             border-radius: 10px;
             cursor: pointer;
             font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
+        /* Button Hover Effect */
         button:hover {
             background-color: #3a56a0;
+            transform: translateY(-5px);
         }
+
+        /* Weather Result Section */
         .weather-result {
             margin-top: 20px;
             text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
         }
+
         .weather-result h2 {
             margin-bottom: 10px;
             font-size: 24px;
         }
+
         .weather-result p {
             margin: 5px 0;
             font-size: 18px;
         }
+
+        /* Mobile Responsiveness */
         @media screen and (max-width: 500px) {
             .container {
                 padding: 20px;
@@ -65,11 +101,45 @@
                 font-size: 16px;
             }
         }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 <body>
+
 <div class="container">
-    <h1>Responsive Weather App</h1>
+    <h1>Weather App</h1>
     <input type="text" id="cityInput" placeholder="Enter city name">
     <button onclick="getWeather()">Get Weather</button>
 
@@ -109,5 +179,6 @@
         }
     }
 </script>
+
 </body>
 </html>

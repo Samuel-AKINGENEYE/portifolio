@@ -33,3 +33,8 @@ function searchProjects() {
         alert('Please enter a valid email address.');
     }
 });
+function toggleMenu() {
+  const navMenu = document.querySelector('.nav-menu');
+  // Toggle the "show" class to open or close the navigation menu
+  navMenu.classList.toggle('show');
+}
